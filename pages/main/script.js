@@ -13,12 +13,14 @@ homeBtn.addEventListener('click', () => {
 });
 
 // Кнопка "Get to know the rest"
+
 const ourFriendsPage = document.querySelector('.our-btn')
 ourFriendsPage.addEventListener('click', () => {
     location.href = '../pets/index.html';
 })
 
 // Меню-бургер
+
 const burgerBtn = document.querySelector('.burger-menu')
 const menu = document.querySelector('.nav')
 const mask = document.querySelector('.mask')
@@ -148,14 +150,10 @@ const nextBtn = document.querySelector('.slider-btn-next');
 const pagBtnPre = document.querySelector('.pag-btn-pre');
 const pagBtnNext = document.querySelector('.pag-btn-next');
 
-// const currentPets = document.querySelectorAll('[data-name]');
 const slider = document.querySelector('.slider');
 const itemLeft = document.querySelector('#item-left');
 const itemRight = document.querySelector('#item-right');
 const itemActive = document.querySelector('#item-active');
-
-
-
 
 function moveRight() {
     slider.classList.add('next-slide');
@@ -207,9 +205,6 @@ preBtn.addEventListener('click', moveLeft)
 pagBtnNext.addEventListener('click', moveRight)
 pagBtnPre.addEventListener('click', moveLeft)
 
-
-// console.log(Math.floor(Math.random() * generatePetsName.length));
-
 function rand(value) {
     let res1 = Math.floor(Math.random() * value)
     let res2 = Math.floor(Math.random() * value)
@@ -222,7 +217,6 @@ function rand(value) {
     }
 
 }
-
 
 slider.addEventListener('animationstart', (animationEvent) => {
     let changeItem;
@@ -238,9 +232,7 @@ slider.addEventListener('animationstart', (animationEvent) => {
         let namePets = petsArray.map(elem => elem.name);
         let generatePetsName = new Set(currentPetsName)
         generatePetsName = namePets.filter(elem => !generatePetsName.has(elem))
-    
-        console.log(`Питомцы, из которых генерируются случайные карточки:\n${generatePetsName}\nСреди них нет предыдущих.`);
-    
+        
         let inedexGenerate = rand(5);
         
         let objForCard1, objForCard2, objForCard3;
@@ -252,11 +244,9 @@ slider.addEventListener('animationstart', (animationEvent) => {
         objForCard1 = objForCard1[0];
         objForCard2 = objForCard2[0];
         objForCard3 = objForCard3[0];
-         
     
         buildNewCard(objForCard1, objForCard2, objForCard3, changeItem);
     }
-
 })
 
 slider.addEventListener('animationend', (animationEvent) => {
@@ -276,7 +266,6 @@ slider.addEventListener('animationend', (animationEvent) => {
         itemChanged = itemRight
 
         itemActive.innerHTML = itemRight.innerHTML;
-
     }
     
     nextBtn.addEventListener('click', moveRight)
@@ -295,11 +284,9 @@ const card = document.querySelectorAll('.card');
 const popup = document.querySelector('.popup')
 let foundPet;
 
-
 closeBtn.addEventListener('click', () => {
     popupBg.classList.remove('show-popup')
     document.querySelector('body').classList.remove('block')
-
 })
 
 popupBg.addEventListener('click', (event) => {
@@ -307,7 +294,6 @@ popupBg.addEventListener('click', (event) => {
         popupBg.classList.remove('show-popup')
 
         document.querySelector('body').classList.remove('block')
-
     }
 })
 
@@ -335,14 +321,11 @@ popup.addEventListener('mouseenter', () => {
 popup.addEventListener('mouseleave', () => {
     closeBtn.style.backgroundColor = '#FDDCC4';
     closeBtn.style.border = 'transparent';
-
 })
-
 
 function searchPet(name) {
     let pet = petsArray.filter(elem => elem.name === name);
     foundPet = pet[0];
-
 }
 
 function createPopup(obj) {
@@ -357,13 +340,3 @@ function createPopup(obj) {
     <li><span class="bold-text">Parasites:</span> <span>${obj.parasites}</span></li>`;
                  
 }
-
-
-
-
-
-
-
-
-
-    
