@@ -6,7 +6,7 @@
 
 ## Технические требования
 
-#### Расширение PerfectPixel для Google Chrome можно использовать для того, чтобы сверяться с изображением Расширение PerfectPixel для Google Chrome
+#### Расширение PerfectPixel для Google Chrome можно использовать для того, чтобы сверяться с изображением.
 
 #### Поддержка браузеров: Google Chrome, Mozilla Firefox. В первую очередь мы разрабатываем для Google Chrome. Затем проверяем, не «рушит» ли Mozilla Firefox наши стили.
 
